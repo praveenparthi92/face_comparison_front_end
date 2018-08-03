@@ -1,0 +1,104 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html ng-app="routerApp">
+
+<head>
+    <style>
+        .navbar {
+            border-radius: 0;
+        }
+
+        #loaderDiv {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 1100;
+            background-color: white;
+            opacity: .6;
+        }
+    </style>
+
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+	
+	<!-- <script src="js/owl.carousel.min.js" type="text/javascript"></script> -->
+	<!-- <script src="node_modules/angular/angular.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+    <script src=" https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.js"> </script>
+    <script src="https://angular-file-upload.appspot.com/js/ng-file-upload-shim.js"></script>
+    <script src="https://angular-file-upload.appspot.com/js/ng-file-upload.js"></script>
+     <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.9.0.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angularjs-toaster/2.0.0/toaster.js"></script>
+    <link href="//cdnjs.cloudflare.com/ajax/libs/angularjs-toaster/0.4.181/toaster.css" rel="stylesheet" />
+    <link href="https://code.highcharts.com/css/highcharts.css">
+    
+    <script src="node_modules/intl-tel-input/build/js/utils.js"></script>
+	<script src="node_modules/intl-tel-input/build/js/intlTelInput.js"></script>
+	<script src="node_modules/ng-intl-tel-input/ng-intl-tel-input.module.js"></script>
+	<script src="node_modules/ng-intl-tel-input/ng-intl-tel-input.provider.js"></script>
+	<script src="node_modules/ng-intl-tel-input/ng-intl-tel-input.directive.js"></script>
+<!-- Footersettinglinks -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://textangular.com/dist/textAngular.css" type="text/css">
+    <link rel="stylesheet" href="node_modules/intl-tel-input/build/css/intlTelInput.css">
+    <script src="https://code.highcharts.com/js/highcharts.js"></script>
+    <script src="https://code.highcharts.com/js/modules/exporting.js"></script>
+    
+
+    <!-- Spinnerlinks -->
+   
+   
+<!-- overall css -->
+    <link rel="stylesheet" href="root/css/style.css">
+    <link rel="stylesheet" href="root/css/toaster.css">
+    <link rel="stylesheet" href="root/css/reset.css">
+    <link rel="stylesheet" href="root/css/font.css">
+    <link rel="stylesheet" href="root/css/font-awesome.css">
+    <link rel="stylesheet" href="root/css/responsive.css">
+    <link rel="stylesheet" href="root/css/spinner.css">
+
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/textAngular/1.5.0/textAngular-rangy.min.js'></script>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/textAngular/1.5.0/textAngular-sanitize.min.js'></script>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/textAngular/1.5.0/textAngular.min.js'></script> 
+    <!-- <script src="/node_modules/ng-country-select/dist/ng-country-select.js"></script> -->
+    <script src="root/js/jquery-1.11.1.min.js" type="text/javascript"></script>
+    <script src="root/js/bootstrap.js" type="text/javascript"></script>
+    <script src="root/js/scripts.js"></script>
+    <script src="root/js/jquery.nicescroll.js"></script>
+    <script src="root/js/animate.js" type="text/javascript"></script>
+    <script src="root/js/treasure-overlay-spinner.min.js"></script>
+    <script src="root/js/spinner.js"></script>
+    <script src="root/js/custom.js"></script>
+    <script src="root/js/dd.js"></script>
+    <script type="text/javascript" src="https://cdn.rawgit.com/codekraft-studio/angular-page-loader/master/dist/angular-page-loader.min.js"></script>
+
+
+ 
+
+
+    <!--controllers-->
+    <script src="root/components/controller/mainController.js"></script>
+    <script src="root/components/service/service.js"></script>
+    <script src="root/components/controller/FaceController.js"></script>
+   
+    
+
+
+
+</head>
+
+<body>
+    <!-- NAVIGATION -->
+
+    <div style="position: relative;">
+        <treasure-overlay-spinner active='spinner.active'>
+        </treasure-overlay-spinner>
+        <toaster-container toaster-options="{'time-out': 4000 ,'animation-class': 'toast-top-center'}"></toaster-container>
+        <ui-view>
+        </ui-view>
+    </div>
+</body>
+
+</html>

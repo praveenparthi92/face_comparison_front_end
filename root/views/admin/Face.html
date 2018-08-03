@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Generic-ico</title>
+	<meta charset="UTF-8">
+
+</head>
+
+<body class="site">
+		<div class="header">
+				<div class="container-fluid">
+					<div class="align-top">
+				  <div class="logo">
+					<img src="root/image/logo.png">		
+				  </div>
+				  <div class="profile-pic">
+				  <div class="profile-name">
+					<!-- <h1 class="profile-name">Welcome {{sessionuser}}!!</h1>
+					<span class="wallet-value">	Wallet Address::{{sessionwallet}}</span> -->
+				 </div>
+					<!-- <div class="dropdown">
+					  <button type="button" onclick="myFunction()" class="dropbtn">
+					   </button>
+					   <div id="myDropdown" class="dropdown-content">
+					<div class="log-psws">
+					   <a href="myProfileUpdate" ui-sref="myProfileUpdate"><img src="root/image/prof.png">Profile</a>
+					   <a href="" ng-click="logout()"><img src="root/image/logout.png">Logout</a>
+					<a href="changeAdminPassword" ui-sref="changeAdminPassword"><img src="root/image/key.png">Change Password</a>
+					   </div>
+					 </div>
+					 </div> -->
+				  </div>
+					</div>
+				  <div class="clear"></div>
+				</div>
+				</div>
+	<div class="content-div">
+		<div class="container-fluid" style="height:100%;">
+			<div class="left-pannel">
+				<div class="left-pannel-icons">
+
+					<!-- <div class="icons">
+						<a class="click-care" href="admindashboard" ui-sref="admindashboard">
+							<img src="root/image/icon1.png">
+							<h3>Dashboard</h3>
+						</a>
+					</div> -->
+					<div class="icons">
+						<a class="active click-care" href="face" ui-sref="face">
+							<img src="root/image/icon2.png">
+							<h3>FaceComparision</h3>
+						</a>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+
+			<div class="right-pannel">
+				<div class="site-setting">
+					<div class="setting">
+						<h4>Face Comparision</h4>
+						<div class="forms">
+							<form name="PhotoForm" novalidate>
+								<div class="form-group">
+									<label> Choose PhotoOne
+										<span>*</span>
+									</label>
+									<input class="site-logo" type="file" ngf-drop ngf-select ng-model="face.photoone" ngf-max-size="1MB" ngf-pattern="'.jpg,.jpeg,.png'" ng-bind="logopath" name="Sitefiles" value=""
+									 autocomplete="off" required>
+									 <!-- <p style="color:red;" ng-show="siteSettingForm.$submitted && siteSettingForm.Sitefiles.$error.required"class="ptag1">Please choose a  file </p> -->
+									 <p style="color:red;" ng-show="PhotoForm.$submitted && PhotoForm.Sitefiles.$error.required"class="ptag1">Please only choose a image format JPG, JPEG, PNG </p>
+									 <p style="color:red;" ng-show="PhotoForm.Sitefiles.$error.maxSize" class="ptag1">Please Upload Only Limit Within 1MB</p>
+								</div>
+								<div class="form-group">
+									<label> Choose PhotoTwo
+										<span>*</span>
+									</label>
+									<input class="site-logo" type="file" ngf-drop ngf-select ng-model="face.phototwo" ngf-max-size="1MB" ngf-pattern="'.jpg,.jpeg,.png'" ng-bind="WhitePaperFilesPath" name="WhitePaperFiles" value=""
+									 autocomplete="off" required>
+									 <p style="color:red;" ng-show="PhotoForm.$submitted && PhotoForm.WhitePaperFiles.$error.required"class="ptag1">Please only choose a image format JPG, JPEG, PNG </p>
+									 <p style="color:red;" ng-show="PhotoForm.WhitePaperFiles.$error.maxSize" class="ptag1">Please Upload Only Limit Within 1MB</p>
+								</div>
+								<div class="form-group">
+									<label>
+									</label>
+											<button type="submit" class="button" ng-click="compareFace(face,PhotoForm.$valid)" value="Save">Compare</button>
+								</div>
+								
+								<div class="Currency-Settings" ng-hide="response">
+									<h4 class="borspace" style="margin-bottom:13px"></h4>
+					  
+									<div class="table-head-ico">
+									  <table>
+										<thead>
+										  <tr>
+												<th ng-hide="response">UnmatchedRequest</th>
+											 </tr>
+										</thead>
+										<tbody>
+										  <tr ng-repeat="msg in Messages ">
+												<td>{{msg}}</td>
+											</tr>
+											<div ng-if='Messages.length==0'>
+					  
+													<h4>No Record</h4>
+									
+													</div>
+										</tbody>
+										
+									  
+					  			</table>
+					  
+									</div>
+					  
+								  </div>
+							</form>
+
+						</div>
+
+						<div class="forms">
+								<h4>Add Photo TO Collection</h4>
+							<form name="AddForm" novalidate>
+								<div class="form-group">
+									<label> Add Image
+										<span>*</span>
+									</label>
+									<input class="site-logo" type="file" ngf-drop ngf-select ng-model="add.collectPhoto" ngf-max-size="1MB" ngf-pattern="'.jpg,.jpeg,.png'" ng-bind="logopath" name="addfiles" value=""
+									 autocomplete="off" required>
+									 <!-- <p style="color:red;" ng-show="siteSettingForm.$submitted && siteSettingForm.Sitefiles.$error.required"class="ptag1">Please choose a  file </p> -->
+									 <p style="color:red;" ng-show="AddForm.$submitted && AddForm.addfiles.$error.required"class="ptag1">Please only choose a image format JPG, JPEG, PNG </p>
+									 <p style="color:red;" ng-show="AddForm.addfiles.$error.maxSize" class="ptag1">Please Upload Only Limit Within 1MB</p>
+								</div>
+	
+								<div class="form-group">
+									<label>
+									</label>
+											<button type="submit" class="button" ng-click="addFace(add,AddForm.$valid)" value="Save">Add</button>
+								</div>
+	
+							</form>
+							</div>
+					</div>
+
+					<div class="clear"></div>
+
+					
+						
+
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+</body>
+
+
+</html>
